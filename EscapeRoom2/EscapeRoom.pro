@@ -28,16 +28,19 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     Room.cpp \
-    item.cpp
+    item.cpp \
+    startgamewindow.cpp
 
 
 HEADERS += \
         mainwindow.h \
     Room.h \
-    item.h
+    item.h \
+    startgamewindow.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    startgamewindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

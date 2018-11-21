@@ -95,7 +95,7 @@ string MainWindow::go(string direction) {
 
 }
 
-void MainWindow::on_for_2_clicked()
+void MainWindow::on_forward_clicked()
 {
     goRoom("forward");
 }

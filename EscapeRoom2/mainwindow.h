@@ -30,7 +30,7 @@ private slots:
 
     void on_back_clicked();
 
-    void on_for_2_clicked();
+    void on_forward_clicked();
 
     void on_pickUp_clicked();
 
