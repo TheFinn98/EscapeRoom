@@ -1,20 +1,21 @@
-#include "Room.h"
+#include "room.h"
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
 
 Room::Room(string description, string roomSetting) {
     this->description = description;
     this->roomSetting = roomSetting;
+    this->itemDescription = itemDescription;
 }
 
 void Room::setExits(Room *forward, Room *backward, Room *right, Room *left) {
-    if (forward != NULL)
+    if (forward != nullptr)
         exits["forward"] = forward;
-    if (backward != NULL)
+    if (backward != nullptr)
         exits["backward"] = backward;
-    if (right != NULL)
+    if (right != nullptr)
         exits["right"] = right;
-    if (left != NULL)
+    if (left != nullptr)
         exits["left"] = left;
 }
 
@@ -30,10 +31,6 @@ string Room::longDescription() {
     return   description + "\n" + displayItem() + exitString();
 }
 
-/*string Room:: getItem()
-{
-    return itemDescription;
-}*/
 string Room::exitString() {
     string returnString = "\nexits =";
     for (map<string, Room*>::iterator i = exits.begin(); i != exits.end(); i++)
@@ -45,7 +42,7 @@ string Room::exitString() {
 Room* Room::nextRoom(string direction) {
     map<string, Room*>::iterator next = exits.find(direction); //returns an iterator for the "pair"
     if (next == exits.end())
-        return NULL; // if exits.end() was returned, there's no room in that direction.
+        return nullptr; // if exits.end() was returned, there's no room in that direction.
     return next->second; // If there is a room, remove the "second" (Room*)
                 // part of the "pair" (<string, Room*>) and return it.
 }
@@ -55,13 +52,13 @@ void Room::addItem(Item *inItem) {
 }
 
 string Room::displayItem() {
-    string tempString = "Item(s) in room = ";
+    string tempString = "Items in room:  ";
 
     if (itemsInRoom.size() < 1) {
         tempString = "No item in room";
         }
     else  {
-        tempString = tempString + itemsInRoom.front().getShortDescription();
+        tempString += itemsInRoom.front().getShortDescription();
         for (std::size_t n = 1; n < itemsInRoom.size(); ++n) {
         tempString += ", " + itemsInRoom[n].getShortDescription();
              }
@@ -69,6 +66,24 @@ string Room::displayItem() {
 
     return tempString;
 }
+
+string Room::showItemInInventory(){
+    string tempString;
+    if (itemsInRoom.size() < 1) {
+        tempString = " ";
+        }
+    else {
+        tempString = itemsInRoom.front().getShortDescription();
+
+    }
+    return tempString;
+
+}
+
+void Room::deleteItem(int index) {
+    itemsInRoom.erase(itemsInRoom.begin() + index);
+}
+
 int Room::numberOfItems() {
     return itemsInRoom.size();
 }

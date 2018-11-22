@@ -18,16 +18,16 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>50</y>
-      <width>401</width>
-      <height>131</height>
+      <y>30</y>
+      <width>411</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;TextLabel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="forward">
+   <widget class="QPushButton" name="for_2">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -82,8 +82,8 @@
    <widget class="QComboBox" name="comboBox">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>20</y>
+      <x>430</x>
+      <y>50</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -96,13 +96,13 @@
     <property name="geometry">
      <rect>
       <x>430</x>
-      <y>0</y>
+      <y>30</y>
       <width>101</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Inventory</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Inventory&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pickUp">
@@ -124,7 +124,7 @@
       <x>370</x>
       <y>100</y>
       <width>151</width>
-      <height>21</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -150,33 +150,73 @@
       <x>170</x>
       <y>230</y>
       <width>121</width>
-      <height>31</height>
+      <height>21</height>
      </rect>
     </property>
    </widget>
-   <widget class="QProgressBar" name="oxygenProgressBar">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>7</x>
-      <y>10</y>
-      <width>401</width>
+      <x>410</x>
+      <y>240</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Progress&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>260</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Use</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="quit">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>0</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Quit</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="oxygenLevel">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>270</y>
+      <width>118</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>253</y>
+      <width>81</width>
       <height>20</height>
      </rect>
     </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The oxygen meter for the escape room. Once this drops to zero its bye bye Leroy! :'(&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="value">
-     <number>100</number>
-    </property>
-    <property name="textVisible">
-     <bool>false</bool>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Oxygen Level:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>

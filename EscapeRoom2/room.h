@@ -29,14 +29,15 @@ public:
 
     Room* nextRoom(string direction);
     string shortDescription();
+    void deleteItem(int index);
     string longDescription();
     string getItem();
     string getRoomSetting();
     string getRoomItem();
     string roomDesc();
     void addItem(Item *item);
-    void removeItem(Item *rItem);
     string displayItem();
+    string showItemInInventory();
     int isItemInRoom(string inString);
     int numberOfItems();
     string itemDesc();
